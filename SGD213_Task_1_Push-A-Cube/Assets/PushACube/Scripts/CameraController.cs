@@ -8,12 +8,13 @@ public class CameraController : MonoBehaviour {
 	// Store a Vector3 offset from the player (a distance to place the camera from the player at all times)
 	private Vector3 offset;
 
-	void Start ()
-	{
+	void Start (){
 		// Create an offset by subtracting the Camera's position from the player's position
 		offset = transform.position - player.transform.position;
 	}
-    void Update()
-	{ }
+	
     // After the standard 'Update()' loop runs, and just before each frame is rendered..
-    void LateUpdate (){transform.position = player.transform.position + offset;}}
+    void LateUpdate (){
+		transform.position = player.transform.position + offset;
+	}
+}
